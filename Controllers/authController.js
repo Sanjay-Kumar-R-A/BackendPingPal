@@ -100,7 +100,7 @@ export const forgotPassword = async (req, res) => {
       from: process.env.PASS_MAIL,
       to: user.email,
       subject: "Password Reset Link",
-      text: `Please click the link to reset your password: http://localhost:5173/reset-password/${user._id}/${token}`,
+      text: `Please click the link to reset your password: https://pingpalnsk.netlify.app/reset-password/${user._id}/${token}`,
     };
     transporter.sendMail(mailOptions, (error) => {
       if (error) {
