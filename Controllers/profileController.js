@@ -1,11 +1,5 @@
 import User from "../Model/userModel.js";
-import cloudinary from "../Config/Cloudinary.js";
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
 
 // Update user profile
 export const updateUserProfile = async (req, res) => {
