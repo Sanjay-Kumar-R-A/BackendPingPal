@@ -4,8 +4,6 @@ import dotenv from "dotenv";
 import connectDb from "./Database/dbConfig.js";
 import authRoute from "./Routes/authRoute.js";
 import chatRoute from "./Routes/chatRoute.js";
-import profileRoute from "./Routes/profileRoute.js";
-import groupRoute from "./Routes/groupRoute.js";
 import notificationRoute from "./Routes/notificationRoute.js";
 
 
@@ -24,8 +22,6 @@ app.get("/",(req,res)=>{
 
 app.use("/api/auth",authRoute);
 app.use('/api/chat', chatRoute);
-app.use('/api/profile', profileRoute);
-app.use('/api/group', groupRoute);
 app.use('/api/notification', notificationRoute);
 
 const port = process.env.PORT || 4000;

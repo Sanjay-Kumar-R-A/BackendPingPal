@@ -1,6 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../Model/userModel.js";
-
+import User from "../Models/userSchema.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -22,3 +21,12 @@ export const authMiddleware = async (req, res, next) => {
   }
 };
 
+// Middleware for admin functionalites
+
+export const adminMiddleware = async(req, res, next) => {
+
+  if(req.user.role !== "admin"){
+    return res.status(403).json({message: "Access Denied"});
+  }
+  next();
+};

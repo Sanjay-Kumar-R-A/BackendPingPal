@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
     },
     profilePicture: {
       type: String,
-      default: "", // URL or path to the user's profile picture
+      default: "",  // Store the image URL or base64 string
     },
     status: {
       type: String,
